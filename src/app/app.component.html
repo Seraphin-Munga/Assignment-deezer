@@ -1,0 +1,13 @@
+
+<nz-layout>
+  <nz-header>
+      <input [(ngModel)]="textSearch" placeholder="Search..." class="input-search" type="text">
+      <button nz-button (click)="search()" class="btn-search" nzType="primary">Search</button>
+  </nz-header>
+  <nz-content>
+      <router-outlet></router-outlet>
+  </nz-content>
+</nz-layout>
+
+
+

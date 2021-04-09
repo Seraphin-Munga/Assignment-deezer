@@ -1,0 +1,19 @@
+@import "../assets/styling/app.color.scss";
+@import "../assets//styling/app.input.scss";
+
+nz-content{
+  background-color: $backgroud-content;
+}
+
+.input-search{
+    @include search()
+}
+
+.btn-search{
+    position: absolute;
+    margin-left: 49vw;
+    margin-top: -42px;
+}
+
+
+

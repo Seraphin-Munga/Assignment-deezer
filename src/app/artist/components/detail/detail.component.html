@@ -1,0 +1,33 @@
+<div nz-row nzJustify="space-around" nzAlign="middle" nzType="flex">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="2">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataArtist">
+        <td>{{item.album.title}}</td>
+        <td >{{item.duration}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div nz-col nzXs="25" nzLg="60">
+    <h1>Albums</h1>
+    <div nz-row>
+      <div nz-col nzSpan="4" *ngFor="let item of dataArtist" class="inner-conntainer">
+        <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
+          <nz-card-meta nzTitle="{{item.album.title}}" nzDescription=" {{item.album.title}}"></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate>
+          <img alt="example" src="{{item.album.cover_big}}" />
+        </ng-template>
+      </div>
+    </div>
+
+  </div>
+</div>

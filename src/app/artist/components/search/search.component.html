@@ -1,0 +1,11 @@
+
+ <div nz-row >
+    <div nz-col nzSpan="4" *ngFor="let item of arrArtist" class="inner-conntainer">
+      <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
+        <nz-card-meta nzTitle="{{item.name}}" nzDescription=" {{item.nb_album}}"></nz-card-meta>
+      </nz-card>
+      <ng-template #coverTemplate>
+      <img alt="example" [routerLink]="['/artist-search/detail', item.id]" src="{{item.picture_big}}"/>
+      </ng-template>
+    </div>
+  </div>
